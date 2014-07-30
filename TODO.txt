@@ -1,0 +1,27 @@
+- Free List
+	- list with no merging (first)
+		- LIFO may want to change to ordered
+	- free list with merging
+		- Prototype functions written
+	- Segregated storage
+- free() function
+	- mark it as free
+		- Done may have errors
+	- merge with adjacent blocks (todo after free list is working)
+		- Prototype functions written, see TODO statements
+- malloc()
+	- look through list to find a suitable size block
+	- if not make a new block of memory by incrementing heap pointer
+- realloc()
+	- extend data
+	- if a block is free next to it extend
+	- if not find a free block of big enough size
+	- if not remove from current block and create a new block
+- heap consistency checker
+	- make sure blocks are actually free
+	- make sure blocks are merged correctly
+	- check to see if allocated blocks are overlaped
+	- make sure we have valid heap addresses
+
+- Notes
+	- users only care about the address of payload should know nothing about blocks
